@@ -1,7 +1,8 @@
-package com.knightua.unzipistic
+package com.knightua.unzipistic.ui.activities.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.knightua.unzipistic.R
 
 class MainActivity : AppCompatActivity() {
 
