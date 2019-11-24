@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.knightua.unzipistic.ui.activities.directory.DirectoryChooserViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activities.directory.DirectoryChooserActivity">
+
+        <ImageView
+            android:id="@+id/imageViewHint"
+            android:layout_width="@dimen/width_dp_128"
+            android:layout_height="@dimen/height_dp_0"
+            android:contentDescription="@string/content_description_hint"
+            app:layout_constraintBottom_toTopOf="@+id/textViewHint"
+            app:layout_constraintDimensionRatio="w,1:1"
+            app:layout_constraintLeft_toLeftOf="@+id/textViewHint"
+            app:layout_constraintRight_toRightOf="@+id/textViewHint"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:srcCompat="@drawable/ic_create_new_folder_primary_24dp" />
+
+        <TextView
+            android:id="@+id/textViewHint"
+            android:layout_width="@dimen/width_dp_0"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_dp_16"
+            android:gravity="center"
+            android:text="@string/hint_directory_choose"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_sp_18"
+            app:layout_constraintBottom_toTopOf="@+id/buttonChooseDirectory"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewHint" />
+
+        <Button
+            android:id="@+id/buttonChooseDirectory"
+            android:layout_width="@dimen/width_dp_0"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_dp_16"
+            android:background="@color/colorPrimary"
+            android:onClick="@{() -> viewModel.chooseDefaultDirectory()}"
+            android:paddingTop="@dimen/padding_dp_8"
+            android:paddingBottom="@dimen/padding_dp_8"
+            android:text="@string/button_choose_directory"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

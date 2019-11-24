@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Unzipistic</string>
+    <string name="hint_directory_choose">Выберите папку по умолчанию, где будут храниться архивы</string>
+    <string name="button_choose_directory">Продолжить</string>
+    <string name="content_description_hint">Directory</string>
 </resources>

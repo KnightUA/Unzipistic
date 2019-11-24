@@ -26,6 +26,9 @@ android {
             debuggable true
         }
     }
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -37,6 +40,9 @@ dependencies {
 
     // Timber
     implementation 'com.jakewharton.timber:timber:4.7.1'
+
+    // Dexter
+    implementation 'com.karumi:dexter:6.0.0'
 
     // LifeCycle
     implementation "android.arch.lifecycle:runtime:$lifecycle_version"
