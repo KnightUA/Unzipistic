@@ -21,12 +21,17 @@ class DirectoryChooserViewModel : ViewModel() {
         }
     }
 
-    fun saveSelectedPath(path: String?) {
+    fun handleSelectedPath(path: String?) {
         Timber.i("Path: $path")
         Settings.saveDefaultPath(path)
+
+        if (::mChooseDirectory.isInitialized) {
+            mChooseDirectory.openNextScreen()
+        }
     }
 
     interface ChooseDirectory {
         fun openFileExplorer()
+        fun openNextScreen()
     }
 }

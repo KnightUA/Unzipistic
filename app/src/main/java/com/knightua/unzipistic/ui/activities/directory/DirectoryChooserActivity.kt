@@ -12,6 +12,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import com.knightua.unzipistic.R
 import com.knightua.unzipistic.databinding.ActivityDirectoryChooserBinding
+import com.knightua.unzipistic.ui.activities.main.MainActivity
 import com.knightua.unzipistic.utils.FileUtil
 
 
@@ -32,8 +33,7 @@ class DirectoryChooserActivity : AppCompatActivity(), DirectoryChooserViewModel.
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == REQUEST_DIRECTORY_PATH && resultCode == Activity.RESULT_OK) {
             val path = FileUtil.getFullPathFromTreeUri(data?.data, this)
-            mBinding.viewModel?.saveSelectedPath(path)
-            //mBinding.viewModel?.saveSelectedPath(this.getExternalFilesDir(null)?.path)
+            mBinding.viewModel?.handleSelectedPath(path)
         }
         super.onActivityResult(requestCode, resultCode, data)
     }
@@ -61,6 +61,12 @@ class DirectoryChooserActivity : AppCompatActivity(), DirectoryChooserViewModel.
                 REQUEST_STORAGE_PERMISSIONS
             )
         }
+    }
+
+    override fun openNextScreen() {
+        val intent = Intent(this, MainActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+        startActivity(intent)
     }
 
     private fun checkPermissions(): Boolean {
