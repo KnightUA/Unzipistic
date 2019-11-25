@@ -44,6 +44,9 @@ dependencies {
     // Dexter
     implementation 'com.karumi:dexter:6.0.0'
 
+    // Hawk
+    implementation "com.orhanobut:hawk:2.0.1"
+
     // LifeCycle
     implementation "android.arch.lifecycle:runtime:$lifecycle_version"
     implementation "android.arch.lifecycle:extensions:$lifecycle_version"

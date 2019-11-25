@@ -2,6 +2,7 @@ package com.knightua.unzipistic.application
 
 import android.app.Application
 import android.content.Context
+import com.orhanobut.hawk.Hawk
 import timber.log.Timber
 
 class Unzipistic : Application() {
@@ -16,10 +17,15 @@ class Unzipistic : Application() {
         appContext = applicationContext
 
         initTimber()
+        initHawk()
     }
 
     private fun initTimber() {
         Timber.plant(Timber.DebugTree())
+    }
+
+    private fun initHawk() {
+        Hawk.init(applicationContext).build()
     }
 
 }
