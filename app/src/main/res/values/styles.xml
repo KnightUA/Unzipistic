@@ -8,4 +8,38 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.Item.File.Name" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">@dimen/width_dp_0</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/text_size_sp_18</item>
+    </style>
+
+    <style name="AppTheme.Item.File.Size" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">@dimen/width_dp_0</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_sp_14</item>
+    </style>
+
+    <style name="AppTheme.Item.File.Unzip" parent="Widget.AppCompat.ImageButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:padding">@dimen/padding_dp_8</item>
+    </style>
+
+    <style name="AppTheme.Item.File.Format" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">@dimen/width_dp_48</item>
+        <item name="android:layout_height">@dimen/height_dp_48</item>
+        <item name="android:layout_marginStart">@dimen/margin_dp_16</item>
+        <item name="android:layout_marginTop">@dimen/margin_dp_8</item>
+        <item name="android:layout_marginBottom">@dimen/margin_dp_8</item>
+        <item name="android:background">@drawable/bg_file_type_colored_primary</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/text_size_sp_12</item>
+    </style>
+
 </resources>

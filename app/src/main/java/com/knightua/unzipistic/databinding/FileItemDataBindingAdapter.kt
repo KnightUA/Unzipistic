@@ -8,7 +8,7 @@ object FileItemDataBindingAdapter {
     @JvmStatic
     @BindingAdapter("showFileSize")
     fun showFileSize(view: TextView, size: Long) {
-        var index = -1
+        var index = 0
         var newSize = size.toFloat()
 
         do {
@@ -19,5 +19,5 @@ object FileItemDataBindingAdapter {
         view.text = String.format("%.2f %s", newSize, SIZES[index])
     }
 
-    private val SIZES = arrayListOf<String>("bytes", "Mbytes", "Gbytes")
+    private val SIZES = arrayListOf<String>("B", "KB", "MB", "GB")
 }

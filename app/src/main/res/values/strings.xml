@@ -4,4 +4,5 @@
     <string name="button_choose_directory">Продолжить</string>
     <string name="content_description_hint">Directory</string>
     <string name="button_extract_files">Unzip</string>
+    <string name="content_description_unzip_file">Unzip file</string>
 </resources>
