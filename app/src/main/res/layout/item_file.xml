@@ -9,7 +9,7 @@
 
         <variable
             name="file"
-            type="com.knightua.unzipistic.ui.adapters.files.FileItem" />
+            type="com.knightua.unzipistic.databinding.viewmodels.FileItemViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,7 +23,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:text="@{file.format}"
+            android:text="@{file.model.format}"
             tools:text="torrent" />
 
         <TextView
@@ -31,7 +31,7 @@
             style="@style/AppTheme.Item.File.Name"
             android:layout_marginStart="@dimen/margin_dp_8"
             android:layout_marginEnd="@dimen/margin_dp_8"
-            android:text="@{file.name}"
+            android:text="@{file.model.name}"
             app:layout_constraintLeft_toRightOf="@+id/textViewFormat"
             app:layout_constraintRight_toLeftOf="@+id/imageButtonUnzip"
             app:layout_constraintTop_toTopOf="@+id/textViewFormat"
@@ -43,7 +43,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/textViewFormat"
             app:layout_constraintLeft_toLeftOf="@+id/textViewName"
             app:layout_constraintRight_toRightOf="@+id/textViewName"
-            app:showFileSize="@{file.size}"
+            app:showFileSize="@{file.model.size}"
             tools:text="12 Mb" />
 
         <ImageButton
@@ -51,7 +51,7 @@
             style="@style/AppTheme.Item.File.Unzip"
             android:layout_marginEnd="@dimen/margin_dp_16"
             android:contentDescription="@string/content_description_unzip_file"
-            android:visibility="@{file.archive ? View.VISIBLE : View.GONE}"
+            android:visibility="@{file.model.archive ? View.VISIBLE : View.GONE}"
             app:layout_constraintBottom_toBottomOf="@+id/textViewFormat"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textViewFormat"

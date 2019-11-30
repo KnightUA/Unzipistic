@@ -1,4 +1,4 @@
-package com.knightua.unzipistic.ui.adapters.files
+package com.knightua.unzipistic.databinding.models
 
 import com.knightua.unzipistic.settings.Settings
 import io.reactivex.rxjava3.core.Single
@@ -18,7 +18,12 @@ class FileModel {
                 Timber.d("Size: %s", files.size)
                 for (file in files) {
                     Timber.d("FileName: %s Size: %d bytes", file.name, file.length())
-                    fileItems.add(FileItem(file.name, file.length()))
+                    fileItems.add(
+                        FileItem(
+                            file.name,
+                            file.length()
+                        )
+                    )
                 }
             }
             emitter.onSuccess(fileItems)

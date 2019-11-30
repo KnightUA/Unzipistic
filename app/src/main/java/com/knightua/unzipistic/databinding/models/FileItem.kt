@@ -1,4 +1,4 @@
-package com.knightua.unzipistic.ui.adapters.files
+package com.knightua.unzipistic.databinding.models
 
 import com.knightua.unzipistic.settings.Settings
 import java.io.File

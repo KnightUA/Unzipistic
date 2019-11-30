@@ -1,7 +1,8 @@
-package com.knightua.unzipistic.databinding
+package com.knightua.unzipistic.databinding.adapters
 
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
+import com.knightua.unzipistic.R
 
 object FileItemDataBindingAdapter {
 
@@ -16,8 +17,10 @@ object FileItemDataBindingAdapter {
             index++
         } while (newSize >= 1024)
 
-        view.text = String.format("%.2f %s", newSize, SIZES[index])
+        view.text = String.format(
+            "%.2f %s",
+            newSize,
+            view.resources.getStringArray(R.array.file_sizes)[index]
+        )
     }
-
-    private val SIZES = arrayListOf<String>("B", "KB", "MB", "GB")
 }

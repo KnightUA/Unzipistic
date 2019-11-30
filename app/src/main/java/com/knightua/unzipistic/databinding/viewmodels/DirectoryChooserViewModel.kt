@@ -1,4 +1,4 @@
-package com.knightua.unzipistic.ui.activities.directory
+package com.knightua.unzipistic.databinding.viewmodels
 
 import androidx.lifecycle.ViewModel
 import com.knightua.unzipistic.settings.Settings

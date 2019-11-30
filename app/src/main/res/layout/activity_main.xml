@@ -7,13 +7,15 @@
 
         <variable
             name="viewModel"
-            type="com.knightua.unzipistic.ui.activities.main.MainViewModel" />
+            type="com.knightua.unzipistic.databinding.viewmodels.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.activities.main.MainActivity">
+
+        r
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewFiles"

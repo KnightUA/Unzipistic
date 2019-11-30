@@ -12,6 +12,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import com.knightua.unzipistic.R
 import com.knightua.unzipistic.databinding.ActivityDirectoryChooserBinding
+import com.knightua.unzipistic.databinding.viewmodels.DirectoryChooserViewModel
 import com.knightua.unzipistic.ui.activities.main.MainActivity
 import com.knightua.unzipistic.utils.FileUtil
 
